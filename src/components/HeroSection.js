@@ -1,11 +1,12 @@
 // import React from 'react';
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { HashLink } from 'react-router-hash-link';
 
 const HeroSection = ()=> {
     return (
        <Container className='hero-section-container'>
             <Row className='h-100'>
-                <Col xs md="8" className='d-flex flex-column justify-content-center text-start px-4'>
+                <Col xs="12" md="8" className='d-flex flex-column justify-content-center text-start px-4'>
                     <div className='mx-4'>
                         <h1>G Lux Photography</h1>
                         <p>
@@ -14,10 +15,12 @@ const HeroSection = ()=> {
                     </div>
                     <div className='btns-wrapper px-4 align-items-center' >
                         <a href="/">View my work</a>
-                        <Button variant='secondary'>Contact Me</Button>
+                        <HashLink to="#contact">
+                            <Button variant='secondary'>Contact Me</Button>
+                        </HashLink>
                     </div>
                 </Col>
-                <Col xs md="4">
+                <Col xs="12" md="4">
                     <div className='img-wrapper'></div>
                 </Col>
             </Row>

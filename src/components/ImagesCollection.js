@@ -1,4 +1,5 @@
 import React from "react";
+import ImageCard from "./ImageCard"
 
 const ImagesCollection = () => {
     const imagesList = [...new Array(8)].map((number, index) => `/images/image-${index + 1}.jpg`);
@@ -10,12 +11,12 @@ const ImagesCollection = () => {
                 return (
                     <li className={index % 2 === 0 ? "item short" : "item tall"}>
                         <figure>
-                            <img src={imgUrl} alt="collection" />
+                            <ImageCard imgUrl={imgUrl} />
                         </figure>
                     </li>
                     );
                 })}
-            </ul>
+            </ul>  
             <div className="d-flex mb-2">
                 <a href="/" className="mx-auto fs-3">
                     View More

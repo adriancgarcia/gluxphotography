@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { ReactComponent as RightArrowIcon } from '../assets/icons/right-arrow-svgrepo-com.svg';
+// import { ReactComponent as RightArrowIcon } from '../assets/icons/right-arrow-svgrepo-com.svg';
 import emailjs from '@emailjs/browser';
 
 const ContactForm = () => {
@@ -23,21 +23,21 @@ const ContactForm = () => {
 
 
     return (
-        <div className='contact-form-section-container d-flex flex-column'>
+        <div className='contact-form-section-container d-flex flex-column' id="contact">
             <h1>
-                <span>Curiosity,</span>
+                <span>Want to know more?</span>
                 <br></br>
-                piqued.
-            </h1>
+                Contact Me
+            </h1>  
             <form ref={form} onSubmit={sendEmail}>
                 <div className='email-input d-flex'>
                     <input type='email' name='email' placeholder='Your email'></input>
                     <button type="submit">
-                        <RightArrowIcon height={20} />
+                        Submit
+                        {/* <RightArrowIcon height={20} /> */}
                     </button>
                 </div>
             </form>
-            <p>Contact Me.</p>
         </div>
     )
 }

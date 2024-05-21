@@ -1,0 +1,29 @@
+import { motion } from 'framer-motion'
+
+const ImageCard = ({ imgUrl }) => {
+    const cardVariants = {
+        offscreen: {
+            opacity: 0,
+        },
+        onscreen: {
+            opacity: 1,
+            transition: {
+                duration: 0.3,
+            }
+        }
+    }
+
+    return (
+        <motion.div
+            variants={cardVariants}
+            initals="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            className= "img-card"
+        >
+            <img src={imgUrl} alt="collection"></img>
+        </motion.div>
+    )
+}
+
+export default ImageCard;
